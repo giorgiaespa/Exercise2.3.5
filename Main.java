@@ -33,7 +33,7 @@ public class Main {
 
     public static String isEqualToday (OffsetDateTime dateTime, OffsetDateTime dateTime2) {
         OffsetDateTime today = OffsetDateTime.now();
-        boolean equal = dateTime.isEqual(dateTime2);
+        boolean equal = dateTime.isEqual(today) && dateTime2.isEqual(today);
         return "le due date son uguali a quella di oggi (" + today.format(DateTimeFormatter.ofPattern("dd MMM yy")) + ")? " + equal;
     }
 }
